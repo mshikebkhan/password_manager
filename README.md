@@ -13,7 +13,7 @@ It’s a productivity booster and a first step toward smarter digital security.
 
 ## 💻 Download for Windows
 
-🔗 [Download Now!](https://github.com/yourusername/password-manager/releases/download/v1.0.0/PasswordManager.exe)
+🔗 [Download Now!](https://github.com/mshikebkhan/password-manager/releases/download/v1.0.0/PasswordManagerSetup.exe)
 
 ---
 
