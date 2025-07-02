@@ -101,6 +101,7 @@ def save():
 # ---- UI SETUP ---- #
 window = Tk()
 window.title("Password Manager")
+window.iconbitmap("lock.ico")
 window.config(padx=50, pady=50)
 
 canvas = Canvas(height=220, width=200)
