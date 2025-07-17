@@ -83,6 +83,7 @@ python main.py
 ## 📌 TODO Ideas
 
 - Add password protection to access the app
+- Import/Export password store file
 - Encrypt .json file using a secure algorithm
 - Add a master password feature
 - Add UI animations or icons for better experience
