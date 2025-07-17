@@ -2,14 +2,18 @@ from tkinter import *
 from tkinter import messagebox
 from random import choice, randint, shuffle
 from pyperclip import copy
+import os
 import json
+
+# ? Use Documents folder (always writable by user)
+json_file_path = os.path.join(os.path.expanduser("~"), "Documents", "locker.json")
 
 # ---- PASSWORD FINDER ---- #
 def search_password():
     website = website_entry.get()
     if website != "":
         try:
-            with open("locker.json", 'r') as locker_file:
+            with open(json_file_path, 'r') as locker_file:
                 data = json.load(locker_file)
                 try:
                     data_dict = data[website]
@@ -79,16 +83,16 @@ def save():
                                                       f"Should we proceed?")
 
         try:
-            locker_file = open("locker.json", "r") # Check if file exists.
+            locker_file = open(json_file_path, "r") # Check if file exists.
             data = json.load(locker_file)  # Reading old data.
             data.update(new_data)  # Updating old data.
             locker_file.close()
         except FileNotFoundError: # Create a brand new file with new data :)
-            locker_file = open("locker.json", "w")
+            locker_file = open(json_file_path, "w")
             json.dump(new_data, locker_file, indent=4)
             locker_file.close()
         else:
-            locker_file = open("locker.json", "w") # Writing updated data.
+            locker_file = open(json_file_path, "w") # Writing updated data.
             json.dump(data, locker_file, indent=4)
             locker_file.close()
         finally:
